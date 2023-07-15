@@ -31,6 +31,10 @@ Route::prefix('cms/')->middleware('guest:admin')->group(function () {
 
 });
 
+Route::prefix('cms/admin')->middleware('auth:admin')->group(function(){
+    Route::get('/logout' , [UserAuthController::class , 'logout'])->name('view.logout');
+});
+
 Route::prefix('cms/admin/')->middleware('auth:admin')->group(function () {
 
     Route::view('','cms.parent');

@@ -342,7 +342,7 @@
           </li>
 
 
-          <li class="nav-header">category</li>
+          <li class="nav-header">contant news</li>
           <li class="nav-item">
 
           </li>
@@ -372,9 +372,53 @@
               </li>
 
 
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="fas fa-thin fa-clipboard-list"></i>
+                  <p>
+                   <span><article></article></span>
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{{ route('articals.index') }}" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>index</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{{ route('articals.create') }}" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>create</p>
+                    </a>
+                  </li>
           </li>
 
+          <li class="nav-header">Setting</li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-user-edit"></i>
 
+              <p class="text">Edit Profile</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-key"></i>
+              <p>Change Password</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('view.logout') }}" class="nav-link">
+              <i class="nav-icon fas fa-sign-out-alt"></i>
+              {{-- <i class="fas fa-sign-out-alt"></i>          --}}
+                   <p>Logout</p>
+            </a>
+          </li>
+          </li>
 
 
 

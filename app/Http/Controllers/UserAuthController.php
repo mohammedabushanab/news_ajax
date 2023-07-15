@@ -38,4 +38,13 @@ class UserAuthController extends Controller
             return response()->json(['icon' => 'error' , 'title' => $validator->getMessageBag()->first()] , 400);
         }
     }
+
+
+    public function logout(Request $request){
+        // $guard = auth('admin')->check() ? 'admin' : 'author';
+        Auth::guard()->logout();
+        $request->session()->invalidate();
+        return redirect()->route('view.login','admin'  );
+    }
+
 }
